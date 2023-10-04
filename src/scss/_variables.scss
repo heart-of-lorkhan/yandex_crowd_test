@@ -1,0 +1,81 @@
+// stylelint-disable scss/dollar-variable-empty-line-before
+
+// Fonts
+// stylelint-disable-next-line
+$font-primary: "OpenSans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+$font-secondary: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+  Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+$font-weight: 300;
+$line-height: 1.4;
+$font-size: 14px;
+$font-size-desktop: 16px;
+
+// Colors
+$color-black: #000;
+$color-white: #fff;
+$color-muted: #f8f8f8;
+
+// Primary - Secondary
+$color-primary: #1e87f0;
+$color-secondary: #222;
+
+// Forms
+$input-background-color: $color-white;
+$input-border-width: 1px;
+$input-border-color: $color-black;
+$input-icon-width: 32px;
+$input-padding-x: 8px;
+$input-padding-y: 8px;
+$input-padding: $input-padding-x $input-padding-y;
+$input-hint-font-size: 14px;
+$input-padding-icon-x: $input-icon-width + $input-padding-x;
+$input-color: $color-black;
+
+// Global cosmetic styles
+$overlay: rgba(0, 0, 0, 0.2);
+
+// Sections
+$section-padding-vertical: 40px;
+$section-padding-vertical-desktop: 80px;
+
+// Easing transitions
+$transition-duration: 0.2s;
+
+// Settings
+$tablet: 768; // Tablets, Ipads (portrait) - from 768px to higher
+$laptop: 1025; // Laptops, Desktops - from 1025px to higher
+$desktop: 1366; // Desktops = 1366px to higher resolution desktops
+$desktop-l: 1920;
+
+// Bootstrap overrides
+// scss-docs-end grid-breakpoints
+$grid-gutter-width: 16px;
+
+$container-padding-x: 70px;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 1025px,
+  xl: 1366px,
+  xxl: 1920px,
+) !default;
+
+@each $breakpoint, $value in $grid-breakpoints {
+  .hidden-#{$breakpoint} {
+    @media (min-width: $value) {
+      display: none;
+    }
+  }
+}
+
+$container-max-widths: (
+  sm: 768px,
+  md: 1240px,
+  lg: 1366px,
+  xl: 1640px,
+  xxl: 1920px,
+) !default;
+// scss-docs-end container-max-widths

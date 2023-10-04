@@ -1,0 +1,27 @@
+.container {
+  @include make-container;
+  max-width: 1920px;
+  padding-right: $container-padding-x;
+  padding-left: $container-padding-x;
+
+  @include tablet {
+    padding-right: $container-padding-x;
+    padding-left: $container-padding-x;
+  }
+
+  @include desktop {
+    padding-right: $container-padding-x * 2;
+    padding-left: $container-padding-x * 2;
+  }
+
+  &.container-md {
+    @include make-container;
+
+    max-width: 1366px;
+
+    @include tablet {
+      padding-right: $container-padding-x;
+      padding-left: $container-padding-x;
+    }
+  }
+}
